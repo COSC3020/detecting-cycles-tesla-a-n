@@ -36,3 +36,4 @@ return T"
 [Disjoint-set data structure](https://en.wikipedia.org/wiki/Disjoint-set_data_structure):
 "a disjoint-set data structure, also called a union–find data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets. It provides operations for adding new sets, merging sets (replacing them with their union), and finding a representative member of a set. The last operation makes it possible to determine efficiently whether any two elements belong to the same set or to different sets."
 
+CoPilot: After creating pseudocode and then test skeletons, or tests with no graphs, I asked CoPilot to generate appropriate graphs for each of the tests.
