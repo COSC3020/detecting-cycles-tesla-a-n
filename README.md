@@ -19,9 +19,10 @@ answer, including your reasoning, to this markdown file.
 ## Sources
 
 [DSA Graphs Cycle Detection](https://www.w3schools.com/dsa/dsa_algo_graphs_cycledetection.php):
-"The two most common ways to detect cycles are:
-Depth First Search (DFS): DFS traversal explores the Graph and marks vertices as visited. A cycle is detected when the current vertex has an adjacent vertex that has already been visited.
-Union-Find: This works by initially defining each vertex as a group, or a subset. Then these groups are joined for every edge. Whenever a new edge is explored, a cycle is detected if two vertices already belong to the same group."
+"Start DFS traversal on each unvisited vertex (in case the Graph is not connected).
+During DFS, mark vertices as visited, and run DFS on the adjacent vertices (recursively).
+If an adjacent vertex is already visited and is not the parent of the current vertex, a cycle is detected, and True is returned.
+If DFS traversal is done on all vertices and no cycles are detected, False is returned."
 
 [Baeldung](https://www.baeldung.com/java-spanning-trees-kruskal):
 "Initialize an empty edge set T. 
