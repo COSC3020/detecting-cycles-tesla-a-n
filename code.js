@@ -13,7 +13,7 @@ function hasCycle(graph) {
     // Check each vertex
     for (const vertex in graph) {
         //if vertex not visited, check if it's part of a cycle
-        if (!visited[vertex] && dfsCheckCycle(graph, vertex, visited)) { // , stack
+        if (!visited[vertex] && dfsCheckCycle(graph, vertex, visited, null)) { // , stack
             return true;
         }
     }
@@ -22,7 +22,7 @@ function hasCycle(graph) {
 }
 
 // use DFS Check Cycle helper function
-function dfsCheckCycle(graph, vertex, visited) { //, stack
+function dfsCheckCycle(graph, vertex, visited, parent) { //, stack
     // Mark current vertex as visited and add to stack
     visited[vertex] = true;
     //stack[vertex] = true;
@@ -30,7 +30,7 @@ function dfsCheckCycle(graph, vertex, visited) { //, stack
     for (const neighbor in graph[vertex]) {
         // If the neighbor not visited, recursively check it
         if (!visited[neighbor]) {
-            if (dfsCheckCycle(graph, neighbor, visited)) { //, stack
+            if (dfsCheckCycle(graph, neighbor, visited, vertex)) { //, stack
                 return true;
             }
         } 
