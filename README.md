@@ -16,6 +16,11 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+This time complexity where V is the # of vertices and E is the # of edges, 
+    We visit each vertex once: O(V)
+    For each vertex, all the edges are explored: O(E)
+    The combined time complexity is O(V + E)
+
 ## Sources
 
 [DSA Graphs Cycle Detection](https://www.w3schools.com/dsa/dsa_algo_graphs_cycledetection.php):
@@ -37,3 +42,7 @@ return T"
 "a disjoint-set data structure, also called a union–find data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets. It provides operations for adding new sets, merging sets (replacing them with their union), and finding a representative member of a set. The last operation makes it possible to determine efficiently whether any two elements belong to the same set or to different sets."
 
 CoPilot: After creating pseudocode and then test skeletons, or tests with no graphs, I asked CoPilot to generate appropriate graphs for each of the tests.
+
+GitHub's "Explain Error" assistant helped me scrub stack logic and implement parent logic
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
