@@ -4,6 +4,7 @@ function hasCycle(graph) {
     // Initialize vertices as not visited
     // Check each vertex
         //if vertex not visited, check if it's part of a cycle
+// use DFS Check Cycle helper function
     // Mark current vertex as visited and add to stack
     // Check all neighbors
         // If the neighbor not visited, recursively check it
