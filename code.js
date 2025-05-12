@@ -35,7 +35,7 @@ function dfsCheckCycle(graph, vertex, visited) { //, stack
             }
         } 
         // If the neighbor already in stack, cycle found
-        else if (parent != parent) {
+        else if (parent != neighbor) {
             return true;
         }
     }
