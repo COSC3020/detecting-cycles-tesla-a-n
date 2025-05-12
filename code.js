@@ -30,14 +30,14 @@ function dfsCheckCycle(graph, vertex, visited) { //, stack
     for (const neighbor in graph[vertex]) {
         // If the neighbor not visited, recursively check it
         if (!visited[neighbor]) {
-            if (dfsCheckCycle(graph, neighbor, visited, stack)) {
+            if (dfsCheckCycle(graph, neighbor, visited)) { //, stack
                 return true;
             }
         } 
         // If the neighbor already in stack, cycle found
-        //else if (stack[neighbor]) {
-           // return true;
-       // }
+        else if (parent != parent) {
+            return true;
+        }
     }
     // Remove vertex from stack when done exploring
     //stack[vertex] = false;
